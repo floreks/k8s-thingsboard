@@ -1,0 +1,43 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "cwgqE9oSkzSjPtP6rqZO2vRtMCc=",
+			"path": "github.com/d2r2/go-dht",
+			"revision": "e4273438f229892a1f868e6e183274311a81b7bc",
+			"revisionTime": "2017-03-28T10:37:35Z"
+		},
+		{
+			"checksumSHA1": "BoXdUBWB8UnSlFlbnuTQaPqfCGk=",
+			"path": "github.com/op/go-logging",
+			"revision": "970db520ece77730c7e4724c61121037378659d9",
+			"revisionTime": "2016-03-15T20:05:05Z"
+		},
+		{
+			"checksumSHA1": "LbVBUKf6512cI6L/g2d0R8uSt6k=",
+			"path": "github.com/traetox/goDS18B20",
+			"revision": "b93ab4b3045365a00e91f9b13c9ab43571d01ec6",
+			"revisionTime": "2015-03-22T15:30:32Z"
+		},
+		{
+			"checksumSHA1": "JA71IIgWDMn4wa8N5Vo516MfuQI=",
+			"path": "github.com/yosssi/gmq/mqtt",
+			"revision": "8b6f29886d48001ed1f76ee3f1471355b0b64b21",
+			"revisionTime": "2016-11-16T02:32:35Z"
+		},
+		{
+			"checksumSHA1": "0b9NC6n3Rawn9M58wwh8HonMges=",
+			"path": "github.com/yosssi/gmq/mqtt/client",
+			"revision": "8b6f29886d48001ed1f76ee3f1471355b0b64b21",
+			"revisionTime": "2016-11-16T02:32:35Z"
+		},
+		{
+			"checksumSHA1": "93LXzoMYa5QQdJOepJkw6g4aaow=",
+			"path": "github.com/yosssi/gmq/mqtt/packet",
+			"revision": "8b6f29886d48001ed1f76ee3f1471355b0b64b21",
+			"revisionTime": "2016-11-16T02:32:35Z"
+		}
+	],
+	"rootPath": "github.com/floreks/k8s-thingsboard"
+}
