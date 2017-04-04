@@ -58,7 +58,6 @@ func (this DHT11Service) ReadAndPublish() {
 
 }
 
-func NewDHT11Service(client *client.MQTTClient) DHT11Service {
-	return DHT11Service{reader: sensor.DHT11ReaderMock{}, client: client, publishInterval: defaultPublishInterval,
-		dataChan: make(chan string)}
+func NewDHT11Service(client *client.MQTTClient, reader sensor.DHTReader) DHT11Service {
+	return DHT11Service{reader: reader, client: client, publishInterval: defaultPublishInterval, dataChan: make(chan string)}
 }

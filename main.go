@@ -5,6 +5,7 @@ import (
 	"os/signal"
 
 	mqtt "github.com/floreks/k8s-thingsboard/client"
+	"github.com/floreks/k8s-thingsboard/sensor/dht"
 	"github.com/floreks/k8s-thingsboard/service/dht"
 )
 
@@ -19,7 +20,9 @@ func main() {
 	// Terminate the Client.
 	defer client.Terminate()
 
-	dht11Service := dht.NewDHT11Service(client)
+	// Change to sensor.DHT11 to read from an actual dht sensor
+	dhtReader, _ := sensor.NewDHTReader(sensor.DHT11_MOCK)
+	dht11Service := dht.NewDHT11Service(client, dhtReader)
 	go dht11Service.ReadAndPublish()
 
 	// Wait for receiving a signal.

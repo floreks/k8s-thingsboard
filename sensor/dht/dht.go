@@ -30,6 +30,7 @@ type SensorType int
 
 const (
 	DHT11 SensorType = iota + 1
+	DHT11_MOCK
 )
 
 // TODO add doc
@@ -59,6 +60,8 @@ func NewDHTReader(sensorType SensorType) (DHTReader, error) {
 	switch sensorType {
 	case DHT11:
 		return DHT11Reader{}, nil
+	case DHT11_MOCK:
+		return DHT11ReaderMock{}, nil
 	default:
 		return nil, fmt.Errorf("Unsupported sensor type provided.")
 	}
