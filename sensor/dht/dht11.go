@@ -25,11 +25,11 @@ package sensor
 import (
 	"fmt"
 	"log"
+	"math/rand"
 	"strings"
+	"time"
 
 	"github.com/d2r2/go-dht"
-	"time"
-	"math/rand"
 )
 
 const (
@@ -65,12 +65,12 @@ type DHT11ReaderMock struct{}
 
 // TODO add doc
 func (DHT11ReaderMock) ReadFromSensor() (*DHTResponse, error) {
-	temperature := random(10,25)
-	humidity := random(40,80)
+	temperature := random(10, 25)
+	humidity := random(40, 80)
 	return &DHTResponse{DHTTemperature{Temperature: temperature}, DHTHumidity{Humidity: humidity}}, nil
 }
 
 func random(min, max int) float32 {
 	rand.Seed(time.Now().Unix())
-	return float32(rand.Intn(max - min) + min)
+	return float32(rand.Intn(max-min) + min)
 }
